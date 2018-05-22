@@ -6,7 +6,7 @@ import Input from '.'
 describe('<Input.Text /> component', () => {
   let inputText
 
-  const inputTextProps = { id: 'text', placeHolder: 'Text' }
+  const inputTextProps = { id: 'text', placeHolder: 'Text', label: 'Text' }
 
   beforeAll(() => {
     inputText = shallow(<Input.Text {...inputTextProps}/>)
@@ -22,15 +22,18 @@ describe('<Input.Text /> component', () => {
   test('should have placeHolder property', () => {
     expect(inputText.find({ placeholder: inputTextProps.placeHolder })).toHaveLength(1)
   })
+  test('should render label text', () => {
+    expect(inputText.text()).toMatch(inputTextProps.label)
+  })
 })
 
 describe('<Input.Password /> component', () => {
   let inputPassword
 
-  const inputPasswordProps = { id: 'password', placeHolder: 'Password' }
+  const inputPasswordProps = { id: 'password', placeHolder: 'Password', label: 'Password' }
 
   beforeAll(() => {
-    inputPassword = shallow(<Input.Text {...inputPasswordProps}/>)
+    inputPassword = shallow(<Input.Password {...inputPasswordProps}/>)
   })
 
   test('should be defined', () => {
@@ -42,5 +45,8 @@ describe('<Input.Password /> component', () => {
   })
   test('should have placeHolder property', () => {
     expect(inputPassword.find({ placeholder: inputPasswordProps.placeHolder })).toHaveLength(1)
+  })
+  test('should render label text', () => {
+    expect(inputPassword.text()).toMatch(inputPasswordProps.label)
   })
 })
