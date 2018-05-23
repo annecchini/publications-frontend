@@ -12,6 +12,8 @@ TODO:
 */
 import React from 'react'
 
-const Button = ({ type, onClick, children }) => (<button className={`btn btn-${type}`} onClick={onClick}>{children}</button>)
+const Button = ({
+  type, onClick, children, className,
+}) => (<button type={type} className={`btn btn-${className}`} onClick={onClick}>{children}</button>)
 
-export const Primary = ({ onClick, children }) => <Button type="primary" onClick={onClick} children={children} />
+export const Primary = ({ type, onClick, children }) => <Button type={type} onClick={onClick}  className="primary">{children}</Button>

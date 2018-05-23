@@ -6,7 +6,7 @@ import Button from '.'
 describe('<Button.Primary /> component', () => {
   let buttonPrimary
 
-  const buttonType = 'primary'
+  const buttonClass = 'primary'
 
   const mockCallBack = jest.fn()
 
@@ -18,7 +18,7 @@ describe('<Button.Primary /> component', () => {
     expect(buttonPrimary.exists()).toBeTruthy()
   })
   test('should have type property', () => {
-    expect(buttonPrimary.find({ type: buttonType })).toHaveLength(1)
+    expect(buttonPrimary.find({ className: buttonClass })).toHaveLength(1)
   })
   test('test click event', () => {
     const innerButton = buttonPrimary.find('button')
