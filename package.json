@@ -15,6 +15,8 @@
     "storybook": "start-storybook -c ./config/storybook -p 9009 -s public"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.5",
+    "@storybook/addons": "^3.4.5",
     "@storybook/react": "^3.4.5",
     "babel-core": "^6.26.3",
     "enzyme": "^3.3.0",
