@@ -6,7 +6,9 @@ import Input from '.'
 describe('<Input.Text /> component', () => {
   let inputText
 
-  const inputTextProps = { id: 'text', placeHolder: 'Text', label: 'Text' }
+  const inputTextProps = {
+    type: 'text', id: 'text', placeHolder: 'Text', label: 'Text',
+  }
 
   beforeAll(() => {
     inputText = shallow(<Input.Text {...inputTextProps}/>)
@@ -15,22 +17,26 @@ describe('<Input.Text /> component', () => {
   test('should be defined', () => {
     expect(inputText.exists()).toBeTruthy()
   })
-
+  test('should have type property', () => {
+    expect(inputText.find({ type: inputTextProps.type })).toHaveLength(1)
+  })
   test('should have id property', () => {
     expect(inputText.find({ id: inputTextProps.id })).toHaveLength(1)
   })
   test('should have placeHolder property', () => {
-    expect(inputText.find({ placeholder: inputTextProps.placeHolder })).toHaveLength(1)
+    expect(inputText.find({ placeHolder: inputTextProps.placeHolder })).toHaveLength(1)
   })
-  test('should render label text', () => {
-    expect(inputText.text()).toMatch(inputTextProps.label)
+  test('should have label property', () => {
+    expect(inputText.find({ label: inputTextProps.label })).toHaveLength(1)
   })
 })
 
 describe('<Input.Password /> component', () => {
   let inputPassword
 
-  const inputPasswordProps = { id: 'password', placeHolder: 'Password', label: 'Password' }
+  const inputPasswordProps = {
+    type: 'password', id: 'password', placeHolder: 'Password', label: 'Password',
+  }
 
   beforeAll(() => {
     inputPassword = shallow(<Input.Password {...inputPasswordProps}/>)
@@ -39,14 +45,16 @@ describe('<Input.Password /> component', () => {
   test('should be defined', () => {
     expect(inputPassword.exists()).toBeTruthy()
   })
-
+  test('should have type property', () => {
+    expect(inputPassword.find({ type: inputPasswordProps.type })).toHaveLength(1)
+  })
   test('should have id property', () => {
     expect(inputPassword.find({ id: inputPasswordProps.id })).toHaveLength(1)
   })
   test('should have placeHolder property', () => {
-    expect(inputPassword.find({ placeholder: inputPasswordProps.placeHolder })).toHaveLength(1)
+    expect(inputPassword.find({ placeHolder: inputPasswordProps.placeHolder })).toHaveLength(1)
   })
-  test('should render label text', () => {
-    expect(inputPassword.text()).toMatch(inputPasswordProps.label)
+  test('should have label property', () => {
+    expect(inputPassword.find({ label: inputPasswordProps.label })).toHaveLength(1)
   })
 })
