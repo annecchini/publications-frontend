@@ -38,7 +38,8 @@ describe('<Input.Text /> component', () => {
     const input = inputText.find({ type: inputTextProps.type })
     expect(input).toHaveLength(1)
     expect(input.dive().find('input')).toHaveLength(1)
-    input.dive().find('input').simulate('change')
+    const event = { target: () => {} }
+    input.dive().find('input').simulate('change', event)
     expect(mockCallBack).toHaveBeenCalled()
   })
 })
@@ -47,7 +48,7 @@ describe('<Input.Password /> component', () => {
   let inputPassword
 
   const inputPasswordProps = {
-    name: 'password', type: 'password', id: 'password', placeHolder: 'Password', label: 'Password',
+    name: 'password', type: 'password', id: 'password', placeHolder: 'Password', label: 'Password', onChange: mockCallBack,
   }
 
   beforeAll(() => {
@@ -76,7 +77,8 @@ describe('<Input.Password /> component', () => {
     const input = inputPassword.find({ type: inputPasswordProps.type })
     expect(input).toHaveLength(1)
     expect(input.dive().find('input')).toHaveLength(1)
-    input.dive().find('input').simulate('change')
+    const event = { target: () => {} }
+    input.dive().find('input').simulate('change', event)
     expect(mockCallBack).toHaveBeenCalled()
   })
 })
