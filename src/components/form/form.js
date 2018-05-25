@@ -1,6 +1,7 @@
 import React, { Component }  from 'react'
 import Input from '../input'
 import Button from '../button'
+import Text from '../text'
 
 export class Login extends Component {
   constructor(props) {
@@ -8,13 +9,15 @@ export class Login extends Component {
     this.state = {}
   }
 
-  handleInputChange = (event) => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
-
+  handleUsernameChange = (value) => {
     this.setState({
-      [name]: value,
+      username: value,
+    })
+  }
+
+  handlePasswordChange = (value) => {
+    this.setState({
+      password: value,
     })
   }
 
@@ -27,11 +30,12 @@ export class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <Input.Text name="username" label="Usuário" onChange={this.handleInputChange} />
+          <Input.Text name="username" label={this.props.userLabel} onChange={this.handleUsernameChange} required/>
         </div>
         <div className="form-group">
-          <Input.Password name="password" label="Senha" onChange={this.handleInputChange} />
+          <Input.Password name="password" label={this.props.passwordLabel} onChange={this.handlePasswordChange} required/>
         </div>
+        {this.props.error && <Text.Error>{this.props.error}</Text.Error>}
         <Button.Primary type="submit">Submit</Button.Primary>
       </form>
     )
