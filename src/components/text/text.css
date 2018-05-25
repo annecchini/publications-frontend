@@ -6,3 +6,8 @@
     font-size: 1rem;
     font-weight: bold;
 }
+
+.text-error--normal{
+    font-size: 1rem;
+    color: red;
+}
