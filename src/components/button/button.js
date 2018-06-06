@@ -14,6 +14,22 @@ import React from 'react'
 
 const Button = ({
   type, onClick, children, className,
-}) => (<button type={type} className={`btn btn-${className}`} onClick={onClick}>{children}</button>)
+}) => (
+  <button
+    type={type}
+    className={`btn btn-${className}`}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+)
 
-export const Primary = ({ type, onClick, children }) => <Button type={type} onClick={onClick}  className="primary">{children}</Button>
+export const Primary = ({ type, onClick, children }) => (
+  <Button
+    type={type}
+    onClick={onClick}
+    className="primary"
+  >
+    {children}
+  </Button>
+)

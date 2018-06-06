@@ -30,13 +30,28 @@ export class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <Input.Text name="username" label={this.props.userLabel} onChange={this.handleUsernameChange} required/>
+          <Input.Text
+            name="username"
+            label={this.props.userLabel}
+            onChange=
+              {this.handleUsernameChange}
+            required
+          />
         </div>
         <div className="form-group">
-          <Input.Password name="password" label={this.props.passwordLabel} onChange={this.handlePasswordChange} required/>
+          <Input.Password
+            name="password"
+            label={this.props.passwordLabel}
+            onChange={this.handlePasswordChange}
+            required
+          />
         </div>
         {this.props.error && <Text.Error>{this.props.error}</Text.Error>}
-        <Button.Primary type="submit">Submit</Button.Primary>
+        <Button.Primary
+          type="submit"
+        >
+        Submit
+        </Button.Primary>
       </form>
     )
   }
