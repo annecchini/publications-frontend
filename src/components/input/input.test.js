@@ -19,22 +19,33 @@ describe('<Input.Text /> component', () => {
   test('should be defined', () => {
     expect(inputText.exists()).toBeTruthy()
   })
+
   test('should have name property', () => {
-    expect(inputText.find({ name: inputTextProps.name })).toHaveLength(1)
+    const input = inputText.find({ name: inputTextProps.name })
+    expect(input).toHaveLength(1)
   })
+
   test('should have type property', () => {
-    expect(inputText.find({ type: inputTextProps.type })).toHaveLength(1)
+    const input = inputText.find({ type: inputTextProps.type })
+    expect(input).toHaveLength(1)
   })
+
   test('should have id property', () => {
-    expect(inputText.find({ id: inputTextProps.id })).toHaveLength(1)
+    const input = inputText.find({ id: inputTextProps.id })
+    expect(input).toHaveLength(1)
   })
+
   test('should have placeHolder property', () => {
-    expect(inputText.find({ placeHolder: inputTextProps.placeHolder })).toHaveLength(1)
+    const input = inputText.find({ placeHolder: inputTextProps.placeHolder })
+    expect(input).toHaveLength(1)
   })
+
   test('should have label property', () => {
-    expect(inputText.find({ label: inputTextProps.label })).toHaveLength(1)
+    const input = inputText.find({ label: inputTextProps.label })
+    expect(input).toHaveLength(1)
   })
-  test('test change event', () => {
+
+  test('should call prop when input changes', () => {
     const input = inputText.find({ type: inputTextProps.type })
     expect(input).toHaveLength(1)
     expect(input.dive().find('input')).toHaveLength(1)
@@ -58,21 +69,32 @@ describe('<Input.Password /> component', () => {
   test('should be defined', () => {
     expect(inputPassword.exists()).toBeTruthy()
   })
+
   test('should have name property', () => {
-    expect(inputPassword.find({ name: inputPasswordProps.name })).toHaveLength(1)
+    const input = inputPassword.find({ name: inputPasswordProps.name })
+    expect(input).toHaveLength(1)
   })
+
   test('should have type property', () => {
-    expect(inputPassword.find({ type: inputPasswordProps.type })).toHaveLength(1)
+    const input = inputPassword.find({ type: inputPasswordProps.type })
+    expect(input).toHaveLength(1)
   })
+
   test('should have id property', () => {
-    expect(inputPassword.find({ id: inputPasswordProps.id })).toHaveLength(1)
+    const input = inputPassword.find({ id: inputPasswordProps.id })
+    expect(input).toHaveLength(1)
   })
+
   test('should have placeHolder property', () => {
-    expect(inputPassword.find({ placeHolder: inputPasswordProps.placeHolder })).toHaveLength(1)
+    const input = inputPassword.find({ placeHolder: inputPasswordProps.placeHolder })
+    expect(input).toHaveLength(1)
   })
+
   test('should have label property', () => {
-    expect(inputPassword.find({ label: inputPasswordProps.label })).toHaveLength(1)
+    const input = inputPassword.find({ label: inputPasswordProps.label })
+    expect(input).toHaveLength(1)
   })
+
   test('test change event', () => {
     const input = inputPassword.find({ type: inputPasswordProps.type })
     expect(input).toHaveLength(1)

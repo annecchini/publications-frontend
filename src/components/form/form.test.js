@@ -17,17 +17,21 @@ describe('<Form.Login /> component', () => {
   test('should be defined', () => {
     expect(root.exists()).toBeTruthy()
   })
+
   test('should have user input', () => {
     expect(root.find(Input.Text)).toHaveLength(1)
   })
+
   test('should have password input', () => {
     expect(root.find(Input.Password)).toHaveLength(1)
   })
+
   test('should have error text', () => {
     expect(root.find(Text.Error)).toHaveLength(1)
     expect(root.find(Text.Error).dive().text()).toMatch(error)
   })
-  test('test submit event', () => {
+
+  test('should call prop when internal form submit', () => {
     const form = root.find('form')
     expect(form).toHaveLength(1)
     const event = { preventDefault: () => {} }

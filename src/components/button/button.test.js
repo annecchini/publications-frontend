@@ -17,9 +17,11 @@ describe('<Button.Primary /> component', () => {
   test('should be defined', () => {
     expect(buttonPrimary.exists()).toBeTruthy()
   })
+
   test('should have type property', () => {
     expect(buttonPrimary.find({ className: buttonClass })).toHaveLength(1)
   })
+
   test('test click event', () => {
     const innerButton = buttonPrimary.find('button')
     expect(innerButton).toHaveLength(1)
