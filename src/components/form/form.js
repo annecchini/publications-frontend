@@ -48,7 +48,7 @@ export class Login extends Component {
         </div>
         {this.props.error && <Text.Error>{this.props.error}</Text.Error>}
         <Button.Primary
-          type="submit"
+          submit
         >
         Submit
         </Button.Primary>

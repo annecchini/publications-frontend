@@ -13,10 +13,10 @@ TODO:
 import React from 'react'
 
 const Button = ({
-  type, onClick, children, className,
+  onClick, children, className, submit,
 }) => (
   <button
-    type={type}
+    type={submit ? 'submit' : 'button'}
     className={`btn btn-${className}`}
     onClick={onClick}
   >
@@ -24,11 +24,11 @@ const Button = ({
   </button>
 )
 
-export const Primary = ({ type, onClick, children }) => (
+export const Primary = ({ onClick, children, submit }) => (
   <Button
-    type={type}
     onClick={onClick}
     className="primary"
+    submit={submit}
   >
     {children}
   </Button>
