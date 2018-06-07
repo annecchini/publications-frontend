@@ -95,7 +95,7 @@ describe('<Input.Password /> component', () => {
     expect(input).toHaveLength(1)
   })
 
-  test('test change event', () => {
+  test('should call prop when input changes', () => {
     const input = inputPassword.find({ type: inputPasswordProps.type })
     expect(input).toHaveLength(1)
     expect(input.dive().find('input')).toHaveLength(1)

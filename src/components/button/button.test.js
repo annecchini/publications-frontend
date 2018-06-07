@@ -22,7 +22,7 @@ describe('<Button.Primary /> component', () => {
     expect(buttonPrimary.find({ className: buttonClass })).toHaveLength(1)
   })
 
-  test('test click event', () => {
+  test('should call prop when internal button click event', () => {
     const innerButton = buttonPrimary.find('button')
     expect(innerButton).toHaveLength(1)
     innerButton.simulate('click')
