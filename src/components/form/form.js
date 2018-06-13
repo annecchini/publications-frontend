@@ -1,5 +1,6 @@
 import React, { Component }  from 'react'
-import Input from '../input'
+import InputText from '../input/text'
+import InputPassword from '../input/password'
 import Button from '../button'
 import Text from '../text'
 
@@ -30,7 +31,7 @@ export class Login extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <div className="form-group">
-          <Input.Text
+          <InputText
             name="username"
             label={this.props.userLabel}
             onChange=
@@ -39,7 +40,7 @@ export class Login extends Component {
           />
         </div>
         <div className="form-group">
-          <Input.Password
+          <InputPassword
             name="password"
             label={this.props.passwordLabel}
             onChange={this.handlePasswordChange}

@@ -2,7 +2,8 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import Form from '.'
-import Input from '../input'
+import InputText from '../input/text'
+import InputPassword from '../input/password'
 import Text from '../text'
 
 describe('<Form.Login /> component', () => {
@@ -19,11 +20,11 @@ describe('<Form.Login /> component', () => {
   })
 
   test('should have user input', () => {
-    expect(root.find(Input.Text)).toHaveLength(1)
+    expect(root.find(InputText)).toHaveLength(1)
   })
 
   test('should have password input', () => {
-    expect(root.find(Input.Password)).toHaveLength(1)
+    expect(root.find(InputPassword)).toHaveLength(1)
   })
 
   test('should have error text', () => {
