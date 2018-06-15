@@ -5,3 +5,4 @@ global.fetch = require('node-fetch')
 
 Enzyme.configure({ adapter: new Adapter() })
 
+global.fetch = require('node-fetch')
