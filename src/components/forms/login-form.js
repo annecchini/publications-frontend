@@ -1,8 +1,11 @@
 import React, { Component }  from 'react'
 import InputText from '../input/text'
 import InputPassword from '../input/password'
-import Button from '../button'
+import { Button } from 'semantic-ui-react'
 import Text from '../text'
+
+import 'semantic-ui-css/semantic.min.css'
+
 export class LoginForm extends Component {
   constructor(props) {
     super(props)
@@ -47,11 +50,9 @@ export class LoginForm extends Component {
           />
         </div>
         {this.props.error && <Text.Error>{this.props.error}</Text.Error>}
-        <Button.Primary
-          submit
-        >
+        <Button>
         Submit
-        </Button.Primary>
+        </Button>
       </form>
     )
   }
