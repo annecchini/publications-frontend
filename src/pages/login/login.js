@@ -1,5 +1,5 @@
 import React, { Component }  from 'react'
-import Form from '../../components/form'
+import LoginForm from '../../components/forms'
 
 import { login } from '../../services/login/login'
 
@@ -16,7 +16,7 @@ export class Login extends Component {
     }
     return (
       <div className="d-flex justify-content-center align-items-center">
-        <Form.Login {...formProps} />
+        <LoginForm {...formProps} />
       </div>
     )
   }

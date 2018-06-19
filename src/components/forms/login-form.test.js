@@ -1,18 +1,18 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import Form from '.'
+import LoginForm from '.'
 import InputText from '../input/text'
 import InputPassword from '../input/password'
 import Text from '../text'
 
-describe('<Form.Login /> component', () => {
+describe('<LoginForm /> component', () => {
   let root
   const mockCallBack = jest.fn()
   const error = 'error'
 
   beforeAll(() => {
-    root = shallow(<Form.Login onSubmit={mockCallBack} error={error}/>)
+    root = shallow(<LoginForm onSubmit={mockCallBack} error={error}/>)
   })
 
   test('should be defined', () => {

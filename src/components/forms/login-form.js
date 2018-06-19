@@ -3,7 +3,7 @@ import InputText from '../input/text'
 import InputPassword from '../input/password'
 import Button from '../button'
 import Text from '../text'
-export class Login extends Component {
+export class LoginForm extends Component {
   constructor(props) {
     super(props)
     this.state = {}

@@ -2,7 +2,7 @@ import * as React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import Form from '.'
+import LoginForm from '.'
 
 const formProps = {
   onSubmit: action('submit'),
@@ -11,5 +11,5 @@ const formProps = {
 }
 
 storiesOf('Form', module)
-  .add('Login form', () => <Form.Login {...formProps} />)
-  .add('Login form with error', () => <Form.Login {...formProps} error="Error"/>)
+  .add('Login form', () => <LoginForm {...formProps} />)
+  .add('Login form with error', () => <LoginForm {...formProps} error="Error"/>)
