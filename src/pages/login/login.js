@@ -6,7 +6,6 @@ import { login } from '../../services/login/login'
 export class Login extends Component {
   handleSubmit = (username, password) => {
     const status = login({ email: username, password })
-    console.log(status)
   }
 
   render() {
