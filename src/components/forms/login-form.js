@@ -1,7 +1,5 @@
 import React, { Component }  from 'react'
-import InputText from '../input/text'
-import InputPassword from '../input/password'
-import { Button } from 'semantic-ui-react'
+import { Button, Form, Input } from 'semantic-ui-react'
 import Text from '../text'
 
 import 'semantic-ui-css/semantic.min.css'
@@ -12,13 +10,13 @@ export class LoginForm extends Component {
     this.state = {}
   }
 
-  handleUsernameChange = (value) => {
+  handleUsernameChange = (e, { value }) => {
     this.setState({
       username: value,
     })
   }
 
-  handlePasswordChange = (value) => {
+  handlePasswordChange = (e, { value }) => {
     this.setState({
       password: value,
     })
@@ -31,29 +29,28 @@ export class LoginForm extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div className="form-group">
-          <InputText
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Field>
+          <label>{this.props.userLabel}</label>
+          <Input type="text"
             name="username"
-            label={this.props.userLabel}
-            onChange=
-              {this.handleUsernameChange}
+            onChange={this.handleUsernameChange}
             required
           />
-        </div>
-        <div className="form-group">
-          <InputPassword
+        </Form.Field>
+        <Form.Field>
+          <label>{this.props.passwordLabel}</label>
+          <Input type="password"
             name="password"
-            label={this.props.passwordLabel}
             onChange={this.handlePasswordChange}
             required
           />
-        </div>
+        </Form.Field>
         {this.props.error && <Text.Error>{this.props.error}</Text.Error>}
         <Button>
         Submit
         </Button>
-      </form>
+      </Form>
     )
   }
 }
