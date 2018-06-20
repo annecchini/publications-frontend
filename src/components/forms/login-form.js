@@ -1,6 +1,5 @@
 import React, { Component }  from 'react'
-import { Button, Form, Input } from 'semantic-ui-react'
-import Text from '../text'
+import { Button, Form, Input, Message } from 'semantic-ui-react'
 
 import 'semantic-ui-css/semantic.min.css'
 
@@ -46,7 +45,7 @@ export class LoginForm extends Component {
             required
           />
         </Form.Field>
-        {this.props.error && <Text.Error>{this.props.error}</Text.Error>}
+        {this.props.error && <Message color="red">{this.props.error}</Message>}
         <Button>
         Submit
         </Button>
