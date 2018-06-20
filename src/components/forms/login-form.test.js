@@ -2,9 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import LoginForm from '.'
-import InputText from '../input/text'
-import InputPassword from '../input/password'
-import Text from '../text'
+import { Button, Form, Input, Message } from 'semantic-ui-react'
 
 describe('<LoginForm /> component', () => {
   let root
@@ -19,21 +17,25 @@ describe('<LoginForm /> component', () => {
     expect(root.exists()).toBeTruthy()
   })
 
-  test('should have user input', () => {
-    expect(root.find(InputText)).toHaveLength(1)
+  test('should have Form component', () => {
+    expect(root.find(Form)).toHaveLength(1)
   })
 
-  test('should have password input', () => {
-    expect(root.find(InputPassword)).toHaveLength(1)
+  test('should have Inputs components', () => {
+    expect(root.find(Input)).toHaveLength(2)
   })
 
-  test('should have error text', () => {
-    expect(root.find(Text.Error)).toHaveLength(1)
-    expect(root.find(Text.Error).dive().text()).toMatch(error)
+  test('should have Button component', () => {
+    expect(root.find(Button)).toHaveLength(1)
+  })
+
+  test('should have Message component', () => {
+    expect(root.find(Message)).toHaveLength(1)
+    expect(root.find(Message).dive().text()).toMatch(error)
   })
 
   test('should call prop when internal form submit', () => {
-    const form = root.find('form')
+    const form = root.find(Form)
     expect(form).toHaveLength(1)
     const event = { preventDefault: () => {} }
     form.simulate('submit', event)
