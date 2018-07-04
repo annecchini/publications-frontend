@@ -1,8 +1,6 @@
 import React, { Component }  from 'react'
 import { Button, Form, Input, Message } from 'semantic-ui-react'
 
-import 'semantic-ui-css/semantic.min.css'
-
 export class LoginForm extends Component {
   constructor(props) {
     super(props)
