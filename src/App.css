@@ -26,3 +26,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.nav-bar {
+  border: 1px solid black;
+}
+
+.header-container {
+  display: flex;
+}
+
+.auth-box{
+  margin-left: auto;
+}
