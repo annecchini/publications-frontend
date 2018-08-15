@@ -38,3 +38,12 @@
 .auth-box{
   margin-left: auto;
 }
+
+.box{
+  border: 1px solid black;
+  margin: 1px;
+}
+
+.box .title{
+  text-align: left;
+}
