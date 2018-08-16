@@ -1,5 +1,5 @@
 import React from "react";
-import {Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 //importanto components
 import Header from "../components/Header/Header.jsx";
@@ -25,14 +25,18 @@ const switchRoutes = (
 
 
 class Dashboard extends React.Component {
-    render(){
+    render() {
         return (
             <div className="box">
                 <div className="title">Layout Dashboard</div>
-                <Sidebar/>
-                <Header/>
-                {switchRoutes}
-                <Footer/>
+                <div className="flex-div">
+                    <Sidebar />
+                    <div className="viewbar">
+                        <Header />
+                        {switchRoutes}
+                        <Footer />
+                    </div>
+                </div>
             </div>
         )
     }
