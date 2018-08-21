@@ -1,7 +1,7 @@
 import React from "react";
 import { Accordion, Button, Form, Segment, Menu } from 'semantic-ui-react'
 import  { Redirect } from 'react-router-dom'
-
+import UserSession from '../services/UserSession.jsx'
 
 
 class Login extends React.Component {
@@ -13,6 +13,9 @@ class Login extends React.Component {
 
     enviaForm = (event) => {
         event.preventDefault();
+        const userSession = UserSession.login(this.state.username, this.state.password)
+        //try {} catch {}
+
         if (this.state.username === 'fernando.void@gmail.com' && this.state.password === '123456') {
             console.log("login successfull");
             localStorage.setItem('auth-token', 'chaveDoUsuarioFernando');

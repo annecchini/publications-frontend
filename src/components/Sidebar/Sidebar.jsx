@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 class Sidebar extends React.Component {
 
-    userIn = () => {
+    userSession = () => {
         return false
     }
 
@@ -14,7 +14,7 @@ class Sidebar extends React.Component {
             <div className="box sidebar">
                 <div className="title">Sidebar</div>
 
-                {this.userIn() ? (
+                {this.userSession() ? (
                     <div className="box">
                         <div className="title">User Panel</div>
                         <p>Usuário logado</p>
