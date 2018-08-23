@@ -2,19 +2,8 @@ import React, { Component } from 'react'
 import './App.css'
 import './index.css';
 import 'semantic-ui-css/semantic.min.css'
-import { Accordion, Button, Form, Segment, Menu } from 'semantic-ui-react'
+import { Accordion, Button, Form, Menu } from 'semantic-ui-react'
 
-const panels = [
-  {
-    key: 'details',
-    title: 'Fazer login',
-    content: {
-      as: Form.Input,
-      label: 'Login',
-      placeholder: 'Email cadastrado...',
-    }
-  },
-]
 
 class App extends Component {
 

@@ -2,33 +2,35 @@
 class UserSession {
 
     static login(username, password) {
-        //Conferir se user e password batem e criar sessão no navegador.
-        return new Promise(Resolve => {
-            if(username === 'fernando.void@gmail.com' && password === '123456'){
-                console.log("login successfull Session")
-                localStorage.setItem('auth_token', 'A1B2C3D4E5F6G7H8I9J0')
-                localStorage.setItem('user_login', 'Fernando')
-                Resolve(this.getData())
-            } else {
-                console.log("login fail Session")
-                throw new Error('Login ou senha incorretos...')
-            }
-        })
 
+        const dados = fetch(`http://localhost:8080/login/${username}`)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                } else {
+                    throw new Error('Não foi possivel efetuar login...')
+                }
+            })
+
+        return dados.then(json => {
+            localStorage.setItem('user_name', json.userData.name)
+            localStorage.setItem('auth_token', json.userData.token)
+            return json;
+        })
     }
 
     static logout() {
         localStorage.removeItem('auth_token')
-        localStorage.removeItem('user_login')
+        localStorage.removeItem('user_name')
     }
 
-    static getData() {
+    static get data() {
         return {
             auth_token: localStorage.getItem('auth_token'),
-            user_login: localStorage.getItem('user_login')
+            user_name: localStorage.getItem('user_name')
         }
     }
-    
+
 }
 
 export default UserSession

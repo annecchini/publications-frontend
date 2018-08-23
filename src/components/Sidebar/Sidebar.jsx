@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import UserSession from '../../services/UserSession.jsx'
-import  { Redirect } from 'react-router-dom'
-
 
 
 class Sidebar extends React.Component {
@@ -20,10 +18,10 @@ class Sidebar extends React.Component {
             <div className="box sidebar">
                 <div className="title">Sidebar</div>
 
-                {UserSession.getData().user_login ? (
+                {UserSession.data.user_name ? (
                     <div className="box">
                         <div className="title">User Panel</div>
-                        <p>{`${UserSession.getData().user_login}`}</p>
+                        <p>{`${UserSession.data.user_name}`}</p>
                         <ul>
                             <li><Link to="/home">Meu perfil</Link></li>
                             <li><Link to="/home">Editar perfil</Link></li>
@@ -46,7 +44,7 @@ class Sidebar extends React.Component {
                     <li><Link to="/welcome">Welcome</Link></li>
                     <li><Link to="/login">Login</Link></li>
                     <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/home">Users</Link></li>
+                    <li><Link to="/users">Users</Link></li>
                 </ul>
             </div>
 

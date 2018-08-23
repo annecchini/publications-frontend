@@ -16,7 +16,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -c ./config/storybook -p 9009 -s public"
+    "storybook": "start-storybook -c ./config/storybook -p 9009 -s public",
+    "jserver": "json-server --port 8080 ./src/services/json-server-data/db.json"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.5",

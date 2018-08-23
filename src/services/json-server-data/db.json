@@ -1,10 +1,66 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" },
-      { "id": 2, "title": "Segundo post", "author": "Fernando" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" }
+  "login": [
+    {
+      "id": "fernando.void@gmail.com",
+      "ok": true,
+      "userData": {
+        "name": "Fernando",
+        "login": "fernando.void@gmail.com",
+        "password": "123456",
+        "token": "A1B2C3D4E5F6G7H8I9J0"
+      }
+    },
+    {
+      "id": "fernando@gmail.com",
+      "ok": false,
+      "userData": {
+        "name": "Ferdinando",
+        "login": "fernando@gmail.com",
+        "password": "123456",
+        "token": "A1B2C3D4E5F6G7H8I9J0"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "fernando",
+      "name": "Fernando",
+      "login": "fernando.void@gmail.com",
+      "email": "fernando.void@gmail.com"
+    },
+    {
+      "id": "marcos",
+      "name": "Marcos",
+      "login": "fernando.void@gmail.com",
+      "email": "fernando.void@gmail.com"
+    },
+    {
+      "id": "jonas",
+      "name": "Jonas",
+      "login": "fernando.void@gmail.com",
+      "email": "fernando.void@gmail.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "title": "Segundo post",
+      "author": "Fernando"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}

@@ -1,6 +1,5 @@
 import React from "react";
-import { Accordion, Button, Form, Segment, Menu } from 'semantic-ui-react'
-import  { Redirect } from 'react-router-dom'
+import { Button, Form } from 'semantic-ui-react'
 import UserSession from '../services/UserSession.jsx'
 
 
@@ -45,14 +44,13 @@ class Login extends React.Component {
         event.preventDefault();
 
         UserSession.login(this.state.username, this.state.password)
-        .then(token => {
-            console.log("Entrei no redirect.")
-            this.props.history.push('/home')
-        })
-        .catch(error => {
-            this.setState({ msg: error.message })
-            console.log("Entrei no catch")
-        })
+            .then((data) => {
+                this.props.history.push('/home')
+            })
+            .catch(error => {
+                this.setState({ msg: error.message });
+            })
+
     }
 
     handleUsernameChange = (e, { value }) => {
