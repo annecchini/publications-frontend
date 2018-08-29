@@ -10,7 +10,7 @@ class Users extends React.Component {
     }
 
     // componentDidMount() {
-    //     service.getUsers()
+    //     usersService.getUsers()
     //         .then(userList => this.setState({
     //             users: userList
     //         }))

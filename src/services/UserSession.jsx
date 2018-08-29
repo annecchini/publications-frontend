@@ -4,13 +4,13 @@ class UserSession {
     static login(username, password) {
 
         const dados = fetch(`http://localhost:8080/login/${username}`)
-            .then(response => {
-                if (response.ok) {
-                    return response.json()
-                } else {
-                    throw new Error('Não foi possivel efetuar login...')
-                }
-            })
+        .then(response => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                throw new Error('Não foi possivel efetuar login...')
+            }
+        })
 
         return dados.then(json => {
             localStorage.setItem('user_name', json.userData.name)
