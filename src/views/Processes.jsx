@@ -18,7 +18,7 @@ class Processes extends React.Component {
                     onRef={ref => (this.processCreate = ref)}
                 />
                 <ProcessList />
-                <button onClick={this.onClick}>Child.method()</button>
+                {/* <button onClick={this.onClick}>Child.method()</button> */}
             </div>
         )
     }

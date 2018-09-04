@@ -1,4 +1,5 @@
 import React from "react";
+import UsersList from "../components/Users/UsersList.jsx"
 
 class Users extends React.Component {
     constructor() {
@@ -23,9 +24,7 @@ class Users extends React.Component {
         return (
             <div className="box">
                 <div className="title">Users</div>
-                <ul>
-                    <li></li>
-                </ul>
+                <UsersList />
             </div>
         )
     }

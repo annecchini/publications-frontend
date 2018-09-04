@@ -11,46 +11,16 @@ class Login extends React.Component {
         msg: ""
     }
 
-    // envia(event) {
-    //     event.preventDefault();
-    //     const requestInfo = {
-    //         method: 'POST',
-    //         body: JSON.stringify({ login: this.login.value, senha: this.senha.value }),
-    //         headers: new Headers({ //Estudar em fetch API
-    //             'Content-type': 'application/json'
-    //         })
-    //     }
-
-    //     fetch('http://localhost:8080/api/public/login', requestInfo)
-    //         .then(response => {
-    //             if (response.ok) {
-    //                 return response.text();
-    //             } else {
-    //                 throw new Error('Não foi possivel fazer o login');
-    //             }
-    //         })
-    //         .then(token => {
-    //             localStorage.setItem('auth-token',token);
-    //             localStorage.setItem('user_login', this.login.value);
-    //             browserHistory.push('/timeline');
-    //         })
-    //         .catch(error => {
-    //             this.setState({ msg: error.message });
-    //         })
-    // }
-
-
     enviaForm = (event) => {
         event.preventDefault();
-
-        UserSession.login(this.state.username, this.state.password)
+        UserSession.login({ login: this.state.username, password: this.state.password })
             .then((data) => {
                 this.props.history.push('/home')
+                //this.props.history.goBack()
             })
             .catch(error => {
                 this.setState({ msg: error.message });
             })
-
     }
 
     handleUsernameChange = (e, { value }) => {

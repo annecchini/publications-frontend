@@ -4,7 +4,7 @@ const loginMessages = {
 }
 
 export const login = async (payload) => {
-  const response = await fetch('https://localhost/v1/auth', {
+  const response = await fetch('https://localhost:6000/v1/auth', {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',

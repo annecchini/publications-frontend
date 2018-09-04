@@ -12,8 +12,7 @@ import Login from "../views/Login.jsx";
 import Welcome from "../views/Welcome.jsx";
 import Users from "../views/Users.jsx";
 import Processes from "../views/Processes.jsx";
-
-
+import Register from "../views/Register.jsx"
 
 import '../App.css';
 
@@ -21,6 +20,7 @@ const switchRoutes = (
     <Switch>
         <Redirect exact from="/" to="/welcome" key={0} />
         <Route path="/welcome" component={Welcome} key={1} />
+        <Route path="/register" component={Register} key={1} />
         <Route path="/login" component={Login} key={2} />
         <Route path="/home" component={Home} key={3} />
         <Route path="/users" component={Users} key={4} />
