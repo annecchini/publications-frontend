@@ -14,8 +14,6 @@ import Users from "../views/Users.jsx";
 import Processes from "../views/Processes.jsx";
 import Register from "../views/Register.jsx"
 
-import '../App.css';
-
 const switchRoutes = (
     <Switch>
         <Redirect exact from="/" to="/welcome" key={0} />

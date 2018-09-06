@@ -40,13 +40,13 @@
 }
 
 .box{
-  border: 1px solid gray;
+  border: 1px solid #BBB;
   margin: 1px;
 }
 
 .box .title{
   text-align: left;
-  color: gray;
+  color: #BBB;
   font-size: 6pt;
   padding: 0;
   margin: 0;

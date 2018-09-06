@@ -1,7 +1,4 @@
 import React, { Component } from 'react'
-import './App.css'
-import './index.css';
-import 'semantic-ui-css/semantic.min.css'
 import { Accordion, Button, Form, Menu } from 'semantic-ui-react'
 
 

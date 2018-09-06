@@ -42,12 +42,12 @@ class Sidebar extends React.Component {
 
                 <ul>
                     <li><Link to="/welcome">Welcome</Link></li>
-                    <li><Link to="/login">Login</Link></li>
                     <li><Link to="/home">Home</Link></li>
                     <li><Link to="/users">Users</Link></li>
                     <li><Link to="/processes">Processos</Link></li>
                     <li><Link to="/especificacoes">Especificações</Link></li>
                     <li><Link to="/sistema">Sistema</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
             </div>
 
